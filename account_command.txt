@@ -1,0 +1,40 @@
+Store:         0xcF1de1a66B6BdBFDc094a6AEb251Ab956A0F460c
+StoreFactory:  0x886B5BA6db6Dd5a9dF12C9B2c12064960857656d
+
+deployer/user account:       0xDB810BA9774833eB3030C359bDbDA1392E4B071d
+
+
+npm i -g truffle 
+truffle init
+truffle-config.js using development environment and solc: version: 0.5.16
+edit contract and migration files 
+npm install @openzeppelin/upgrades
+ganache-cli
+
+
+truffle console
+compile
+migrate --reset
+sf = await StoreFactory.deployed()
+sf.impl()
+networks
+sf.clone()                        //magic part of this process
+sf.getPastEvents('ProxyCreated')
+store1 = await Store.at('0x87FF1f05476a98A4e09896CfF489c835C1beddF7')
+store1.value()
+store1.setValue('My first store')
+store1.value()
+sf.clone()
+sf.clone()
+sf.clone()
+sf.getPastEvents('ProxyCreated', {fromBlock:0})
+store2 = await Store.at('0x289E55c17A6beacbf2410aB997F94CB4E4106DD2')
+store3 = await Store.at('0x369028ECE70E457fd245A3182c57dEB58Ad7f684')
+store4 = await Store.at('0xf35bE704f34FBF523B4DCe310abA594bf4372DB4')
+store2.setValue("My Second Store")
+store3.setValue('My third Store')
+store4.setValue('My 4 Store')
+store1.value()
+store2.value()
+store3.value()
+store4.value()
